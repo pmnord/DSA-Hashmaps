@@ -4,15 +4,17 @@
 Walk through the HashMap implementation in the curriculum and understand it well. Then write a HashMap class and its core functions with open addressing as the collision resolution mechanism.
 
 Export your HashMap module
-Create a .js file called HashMaps_drills. In the file import the HashMap module. Create a function called main()
-Inside your main() function, create a hash map called lotr.
-For your hash map that you have created, set the MAX_LOAD_RATIO = 0.5 and SIZE_RATIO = 3.
-Add the following items to your hash map: {"Hobbit": "Bilbo"}, {"Hobbit": "Frodo"},
+Create a .js file called HashMaps_drills. In the file import the HashMap module. Create a function called `main()`
+Inside your `main()` function, create a hash map called `lotr`.
+For your hash map that you have created, set the `MAX_LOAD_RATIO = 0.5` and `SIZE_RATIO = 3`.
+Add the following items to your hash map: 
+```{"Hobbit": "Bilbo"}, {"Hobbit": "Frodo"},
 {"Wizard": "Gandalf"}, {"Human": "Aragorn"}, {"Elf": "Legolas"}, {"Maiar": "The Necromancer"},
 {"Maiar": "Sauron"}, {"RingBearer": "Gollum"}, {"LadyOfLight": "Galadriel"}, {"HalfElven": "Arwen"},
 {"Ent": "Treebeard"}
+```
 Print your hash map and notice the length and items that are hashed in your hash map. Have you hashed all the items you were asked to?
-Retrieve the value that is hashed in the key "Maiar" and Hobbit.
+Retrieve the value that is hashed in the key `"Maiar"` and `Hobbit`.
 What are the values of Maiar and Hobbit that you have? Is there a discrepancy? Explain your answer.
 What is the capacity of your hash table after you have hashed all the above items? Explain your answer.
 
@@ -185,4 +187,36 @@ groupAnagrams(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'])
 ## 7. Separate Chaining
 Write another hash map implementation as above, but use separate chaining as the collision resolution mechanism.
 
+[Hash Map with Chaining Implementation](./hashmap-with-chaining.js)
+
 Test your hash map with the same values from the lotr hash map.
+
+```js
+HashMap {
+  length: 11,
+  _hashTable:
+   [ <2 empty items>,
+     { key: 'HalfElven', value: 'Arwen', next: null, DELETED: false },
+     <1 empty item>,
+     { key: 'LadyOfLight',
+       value: 'Galadriel',
+       next: null,
+       DELETED: false },
+     <1 empty item>,
+     { key: 'Wizard',
+       value: 'Gandalf',
+       next: [Object],
+       DELETED: false },
+     <5 empty items>,
+     { key: 'Elf', value: 'Legolas', next: null, DELETED: false },
+     { key: 'Hobbit', value: 'Frodo', next: null, DELETED: false },
+     <6 empty items>,
+     { key: 'Ent', value: 'Treebeard', next: null, DELETED: false },
+     { key: 'Ent1', value: 'Treebeard', next: null, DELETED: false },
+     { key: 'Ent2', value: 'Treebeard', next: null, DELETED: false },
+     { key: 'Maiar', value: 'Sauron', next: [Object], DELETED: false } ],
+  _capacity: 24,
+  _deleted: 0,
+  MAX_LOAD_RATIO: 0.5,
+  SIZE_RATIO: 3 }
+```
