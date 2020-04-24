@@ -50,6 +50,30 @@ function main() {
 
   console.log(lotr);
 }
+
+HashMap {
+  length: 12,
+  _hashTable:
+   [ { key: 'Ent2', value: 'Treebeard', DELETED: false },
+     { key: 'Ent3', value: 'Treebeard', DELETED: false },
+     { key: 'HalfElven', value: 'Arwen', DELETED: false },
+     <1 empty item>,
+     { key: 'LadyOfLight', value: 'Galadriel', DELETED: false },
+     <1 empty item>,
+     { key: 'Wizard', value: 'Gandalf', DELETED: false },
+     { key: 'RingBearer', value: 'Gollum', DELETED: false },
+     <4 empty items>,
+     { key: 'Elf', value: 'Legolas', DELETED: false },
+     { key: 'Hobbit', value: 'Frodo', DELETED: false },
+     <6 empty items>,
+     { key: 'Ent', value: 'Treebeard', DELETED: false },
+     { key: 'Ent1', value: 'Treebeard', DELETED: false },
+     { key: 'Human', value: 'Aragorn', DELETED: false },
+     { key: 'Maiar', value: 'Sauron', DELETED: false } ],
+  _capacity: 24,
+  _deleted: 0,
+  MAX_LOAD_RATIO: 0.5,
+  SIZE_RATIO: 3 }
 ```
 
 ## 2. WhatDoesThisDo
